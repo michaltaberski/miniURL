@@ -20,6 +20,12 @@ class ShortcutsController < ApplicationController
       format.xml  { render :xml => @shortcut }
     end
   end
+  
+  
+  def go
+    @shortcut = Shortcut.find(params[:alias])
+    redirect_to 'http://' + @shortcut.link
+  end
 
   # GET /shortcuts/new
   # GET /shortcuts/new.xml
@@ -80,4 +86,5 @@ class ShortcutsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
 end
