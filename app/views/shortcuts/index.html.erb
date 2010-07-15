@@ -1,0 +1,27 @@
+<h1>Listing shortcuts</h1>
+
+<table>
+  <tr>
+    <th>Link</th>
+    <th>Alias</th>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @shortcuts.each do |shortcut| %>
+  <tr>
+    <td><%= shortcut.link %></td>
+    <td><%= shortcut.alias %></td>
+    <td><%= shortcut.name %></td>
+    <td><%= link_to 'Show', shortcut %></td>
+    <td><%= link_to 'Edit', edit_shortcut_path(shortcut) %></td>
+    <td><%= link_to 'Destroy', shortcut, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Shortcut', new_shortcut_path %>

@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Link:</b>
+  <%= @shortcut.link %>
+</p>
+
+<p>
+  <b>Alias:</b>
+  <%= @shortcut.alias %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @shortcut.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_shortcut_path(@shortcut) %> |
+<%= link_to 'Back', shortcuts_path %>
