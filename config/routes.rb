@@ -1,6 +1,6 @@
 Miniurl::Application.routes.draw do |map|
 
-  root :to => "shortcuts#index"
+  root :to => "shortcuts#new"
 
   resources :shortcuts
 
