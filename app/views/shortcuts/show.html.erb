@@ -1,20 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Link:</b>
-  <a href = "http://<%= @shortcut.link %>" target = "_blank"><%= @shortcut.link%></a>
-</p>
-
-<p>
-  <b>Alias:</b>
-  <%= @shortcut.alias %>
-</p>
-
-<p>
-  <b>Name:</b>
-  <%= @shortcut.name %>
-</p>
+<h2>
+  <a href = "http://<%= @shortcut.link %>" target = "_blank"><%= @shortcut.link%></a> <br/>=<br/> 
+  <a href = "<%= root_url %><%= @shortcut.id %>"><%= root_url %><%= @shortcut.id %></a>
+</h2>
 
 
-<%= link_to 'Edit', edit_shortcut_path(@shortcut) %> |
-<%= link_to 'Back', shortcuts_path %>
+<% link_to 'Edit', edit_shortcut_path(@shortcut) %> 
+<% link_to 'Back', shortcuts_path %>

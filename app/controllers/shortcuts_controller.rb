@@ -47,7 +47,7 @@ class ShortcutsController < ApplicationController
   # POST /shortcuts.xml
   def create
     @shortcut = Shortcut.new(params[:shortcut])
-
+    
     respond_to do |format|
       if @shortcut.save
         format.html { redirect_to(@shortcut, :notice => 'Shortcut was successfully created.') }
