@@ -1,0 +1,7 @@
+<tr>
+	<td><%= link_to 'X', shortcut, :confirm => 'Are you sure?', :method => :delete %></td>
+	<td>
+		<a href = "<%= root_url %><%= shortcut.id %>"><%= root_url %><%= shortcut.id %></a> ->
+		<%= shortcut.link %>
+	</td>
+</tr>

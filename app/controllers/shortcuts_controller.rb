@@ -53,6 +53,7 @@ class ShortcutsController < ApplicationController
       if @shortcut.save
         format.html { redirect_to(@shortcut, :notice => 'Shortcut was successfully created.') }
         format.xml  { render :xml => @shortcut, :status => :created, :location => @shortcut }
+        format.js
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @shortcut.errors, :status => :unprocessable_entity }

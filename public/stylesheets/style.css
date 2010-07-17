@@ -144,3 +144,10 @@ h2 {
 	display: block;
 	text-align: center;
 }
+
+#info {
+	text-align: center;
+    color: red;
+    font-weight: bold;
+	margin-top: 20px;
+}
