@@ -3,6 +3,7 @@ class ShortcutsController < ApplicationController
   # GET /shortcuts.xml
   def index
     @shortcuts = Shortcut.all
+    @shortcut = Shortcut.new
 
     respond_to do |format|
       format.html # index.html.erb

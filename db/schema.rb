@@ -13,8 +13,6 @@ ActiveRecord::Schema.define(:version => 20100715112403) do
 
   create_table "shortcuts", :force => true do |t|
     t.string   "link"
-    t.string   "alias"
-    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

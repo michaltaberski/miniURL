@@ -1,18 +1,18 @@
 
+<%= render 'form' %>
+
 <table id="shortctuslist">
   <tr>
-    <th>Link</th>
-    <th></th>
     <th></th>
     <th></th>
   </tr>
-
 <% @shortcuts.each do |shortcut| %>
   <tr>
+	<td>
+		<%= link_to 'X', shortcut, :confirm => 'Are you sure?', :method => :delete %></td>
     <td>
 	<a href = "<%= root_url %><%= shortcut.id %>"><%= root_url %><%= shortcut.id %></a> ->
 	<%= shortcut.link %></td>
-    <td><%= link_to 'Delete', shortcut, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
